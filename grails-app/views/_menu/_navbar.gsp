@@ -24,7 +24,7 @@
 				color:#ddd;
 			}
 			ul.sdt_menu{
-				margin-top:50px;
+				margin-top:100px;
 			}
 			
 		</style>
@@ -108,8 +108,7 @@
 			</ul>
 		</div>
        <!-- The JavaScript -->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-		<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+       
 		<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery.easing.1.3.js')}"></script>
 		
         <script type="text/javascript">

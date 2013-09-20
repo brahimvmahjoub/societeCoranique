@@ -1,7 +1,7 @@
 <style>
 
 #Content{
-background-color: #ededed;
+
 margin-top: 10px;
 }
 

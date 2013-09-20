@@ -52,7 +52,8 @@ class ImageController {
 
 	def list = {
 
-		def listImage = Image.list()
+		def listImage = Image.list([sort: 'dateCreated', order: 'desc'])
+		
 		[imageInstanceList: listImage]
 
 	}
