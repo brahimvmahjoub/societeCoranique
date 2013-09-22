@@ -10,6 +10,11 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile
 class ImageController {
 
 	def index(){
+		params.max = Math.min(params.max ? params.int('max') : 9, 100)
+		params.sort = 'dateCreated'
+		params.order= 'desc'
+
+		[imageInstanceList: Image.list(params),imageInstanceCount:Image.count()]
 	}
 
 	def upload={
@@ -33,7 +38,7 @@ class ImageController {
 		def f = request.getFile('myFile')
 		if (f.empty) {
 			flash.message = 'file cannot be empty'
-			redirect(action: 'list')
+			redirect(action: 'index')
 		}
 		img.myFile = f.getBytes()
 		img.name = params.myFile?.originalFilename
@@ -42,20 +47,11 @@ class ImageController {
 			f.transferTo(new File(storagePath+params.myFile?.originalFilename))
 
 			flash.message = 'Done ... File uploaded'
-			redirect(action: 'list')
+			redirect(action: 'index')
 		}
 		else{
 			flash.message = 'ERROR ... File NOT uploaded'
-			redirect(action: 'list')
+			redirect(action: 'index')
 		}
 	}
-
-	def list = {
-
-		def listImage = Image.list([sort: 'dateCreated', order: 'desc'])
-		
-		[imageInstanceList: listImage]
-
-	}
-
 }

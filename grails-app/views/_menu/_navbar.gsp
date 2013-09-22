@@ -25,6 +25,7 @@
 			}
 			ul.sdt_menu{
 				margin-top:100px;
+				margin-left: -100px;
 			}
 			
 		</style>
@@ -33,14 +34,14 @@
 			
 			<ul id="sdt_menu" class="sdt_menu">
 				<li>
-					<a href="#">
+					<g:link controller="home" action="index">
 						<img src="${resource(dir: 'images', file: '1.png')}" alt=""/>
 						<span class="sdt_active"></span>
 						<span class="sdt_wrap">
 							<span class="sdt_link">Accueil</span>
 							<span class="sdt_descr">présentation</span>
 						</span>
-					</a>
+					</g:link>
 				</li>
 				<li>
 					<a href="#">
@@ -69,30 +70,26 @@
 					</div>
 				</li>
 				<li>
-					<a href="#">
+					<g:link controller="image" action="index">
 						<img src="${resource(dir: 'images', file: '4.png')}" alt=""/>
 						<span class="sdt_active"></span>
 						<span class="sdt_wrap">
 							<span class="sdt_link">Photos</span>
 							<span class="sdt_descr">nos photos</span>
 						</span>
-					</a>
-					<div class="sdt_box">
-							<a href="#">Modifier Photos</a>													
-					</div>
+					</g:link>
+					
 				</li>
 				<li>
-					<a href="#">
+					<g:link controller="video" action="index">
 						<img src="${resource(dir: 'images', file: '5.png')}" alt=""/>
 						<span class="sdt_active"></span>
 						<span class="sdt_wrap">
 							<span class="sdt_link">Videos</span>
 							<span class="sdt_descr">nos videos</span>
 						</span>
-					</a>
-					<div class="sdt_box">
-							<a href="#">Modifier Videos</a>													
-					</div>
+					</g:link>
+					
 				</li>
 				<li>
 					<a href="#">

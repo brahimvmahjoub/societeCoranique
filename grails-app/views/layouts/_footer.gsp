@@ -1,4 +1,20 @@
-<footer class="footer">
+<style>
+#footer {
+	margin-top: 0px;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 300px;
+	position: static;
+	background-position: fixed;
+	background: linear-gradient(to right, #0A2229, #81DAF5);
+	color: #BDBDBD;
+}
+
+#footer div {
+	margin-top: 20px;
+}
+</style>
+<div id="footer">
 	<div class="container">
 		<div class="row">
 			<div class="span2">
@@ -26,8 +42,13 @@
 						href="${createLink(uri: '/contact')}"> Contact </a></li>
 				</ul>
 			</div>
-			<div class="span8">
-			<h4>Societé coranique</h4>
-			Copyright @ 2013
+			<div class="span5">
+				<h4>Societé coranique</h4>
+				<p>Copyright @ 2013</p>
 			</div>
-</footer>
+			<div class="span3">
+				<g:link controller="home" action="index">
+					<g:img dir="images/sigle" file="sigle.png" class="img-circle" />
+				</g:link>
+			</div>
+		</div>
