@@ -28,7 +28,6 @@
 
 <body>
 
-
 	<!-- Button to trigger modal -->
 	<a href="#myModal" id="launch" role="button" class="btn btn-primary"
 		data-toggle="modal"> <b> Upload Video</b></a>
