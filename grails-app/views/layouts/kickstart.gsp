@@ -22,7 +22,7 @@
 	<r:require modules="bootstrap_utils"/>
 
 	<r:layoutResources />
-	<g:layoutHead />
+	<g:layoutHead  />
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 	<!--[if lt IE 9]>

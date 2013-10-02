@@ -8,7 +8,7 @@
         <style>
 			
 			span.reference{
-				position:fixed;
+				
 				left:10px;
 				bottom:10px;
 				font-size:12px;
@@ -25,7 +25,7 @@
 			}
 			ul.sdt_menu{
 				margin-top:100px;
-				margin-left: -100px;
+				margin-left: 0;
 			}
 			
 		</style>
@@ -92,14 +92,14 @@
 					
 				</li>
 				<li>
-					<a href="#">
+					<g:link controller="contact" action="index">
 						<img src="${resource(dir: 'images', file: '6.png')}" alt=""/>
 						<span class="sdt_active"></span>
 						<span class="sdt_wrap">
 							<span class="sdt_link">Contact</span>
 							<span class="sdt_descr">contacter nous</span>
 						</span>
-					</a>
+					</g:link>
 					
 				</li>				
 			</ul>

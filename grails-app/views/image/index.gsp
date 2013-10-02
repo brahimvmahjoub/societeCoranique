@@ -47,11 +47,10 @@
 			<h3 id="myModalLabel">Upload Photo</h3>
 		</div>
 		<div class="modal-body">
-			<p>
-				<g:uploadForm action="upload">
-					<input type="file" name="myFile" />
-					<input type="submit" />
-				</g:uploadForm>
+			<g:uploadForm action="upload">
+				<input type="file" name="myFile" />
+				<button type="submit" class="btn">Upload</button>
+			</g:uploadForm>
 			</p>
 		</div>
 		<div class="modal-footer">
@@ -59,8 +58,9 @@
 		</div>
 	</div>
 	<br />
-
-	<g:paginate total="${imageInstanceCount}" />
+	<div class="pagination">
+		<bs:paginate total="${imageInstanceCount}" />
+	</div>
 	<br />
 	<br />
 	<g:each in="${imageInstanceList}" status="i" var="imageInstance">
@@ -73,6 +73,8 @@
 				class="img-thumbnail" />
 		</div>
 	</g:each>
+	<br />
+	<br />
 </body>
 
 </html>

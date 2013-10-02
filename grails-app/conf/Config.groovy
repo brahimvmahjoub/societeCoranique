@@ -91,3 +91,33 @@ log4j = {
 }
 
 grails.config.defaults.locations = [KickstartResources]
+
+grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
+grails.plugins.springsecurity.interceptUrlMap = [
+   '/user/**'       : ['ROLE_ADMIN'],
+   '/role/**'       : ['ROLE_ADMIN'],
+   '/userRole/**'   : ['ROLE_ADMIN'],
+]
+
+grails {
+	mail {
+	host = "smtp.gmail.com"
+	port = 465
+	username = "societecoranique.fn@gmail.com"
+	password = "216+=fat"
+	props = ["mail.smtp.auth":"true", 					   
+              "mail.smtp.socketFactory.port":"465",
+              "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+              "mail.smtp.socketFactory.fallback":"false"]
+	
+	}
+}
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'societecoranique.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'societecoranique.UserRole'
+grails.plugins.springsecurity.authority.className = 'societecoranique.Role'
+
+
+grails.plugins.springsecurity.ui.forgotPassword.emailBody = 'Bonjour,\nCette adresse email a été enregistré comme utilisateur SCF.\nPour confirmer, veuillez visiter: http://localhost:8090/SocieteCoranique'
+grails.plugins.springsecurity.ui.forgotPassword.emailFrom = 'societecoranique.fn@gmail.com'
+grails.plugins.springsecurity.ui.forgotPassword.emailSubject = 'Confirmez votre e-mail pour SCF'

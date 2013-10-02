@@ -43,32 +43,29 @@
 		<div class="modal-body">
 
 
-			<g:form action="upload">
+			<g:form class="form-horizontal" action="upload">
 				<fieldset class="form">
-					<div
-						class="fieldcontain ${hasErrors(bean: video, field: 'myFile', 'error')} ">
-						<label for="myFile"> <g:message code="video.line.label"
-								default="Lien Video" />
-
-						</label>
-						<g:textField name="myFile" value="${video?.myFile}" />
-					</div>
-
 					<div
 						class="fieldcontain ${hasErrors(bean: video, field: 'name', 'error')} ">
 						<label for="password"> <g:message
 								code="endUser.name.label" default="Name" />
-
 						</label>
 						<g:textField name="name" value="${video?.name}" />
 					</div>
+					<div
+						class="fieldcontain ${hasErrors(bean: video, field: 'myFile', 'error')} ">
+						<label for="myFile"> <g:message code="video.line.label"
+								default="Lien Video" />
+						</label>
+						<g:textField name="myFile" value="${video?.myFile}" />
+					</div>
+
+
 				</fieldset>
 				<fieldset class="buttons">
-					<g:submitButton name="upload" value="upload" />
+					<button type="submit" class="btn">Upload</button>
 				</fieldset>
 			</g:form>
-
-
 		</div>
 		<div class="modal-footer">
 			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -76,7 +73,9 @@
 	</div>
 	<br />
 
-	<g:paginate total="${VideoInstanceCount}" />
+	<div class="pagination" >
+		<bs:paginate total="${VideoInstanceCount}" />
+	</div>
 	<br />
 	<br />
 
@@ -108,6 +107,9 @@
 			</object>
 		</div>
 	</g:each>
+	<br />
+	<br />
+
 
 </body>
 
